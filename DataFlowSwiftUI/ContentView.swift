@@ -34,8 +34,17 @@ struct ButtonView: View {
     @Binding var timer: Int
     
     var body: some View {
-        Button("Start") {
-            timer -= 1
+        Button(action: { timer -= 1 }) {
+            Text("Start")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(.white)
         }
+        .frame(width: 200, height: 60)
+        .background(.red)
+        .cornerRadius(20)
+        .overlay(
+            RoundedRectangle(cornerRadius: 20).stroke(.black, lineWidth: 4)
+        )
     }
 }
