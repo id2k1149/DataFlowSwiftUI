@@ -11,10 +11,12 @@ struct StarterView: View {
     @EnvironmentObject private var user: UserManager
     
     var body: some View {
-        if user.isRegisted {
-            ContentView()
-        } else {
-            RegisterView()
+        Group {
+            if user.isRegisted {
+                ContentView()
+            } else {
+                RegisterView()
+            }
         }
     }
 }
@@ -22,5 +24,6 @@ struct StarterView: View {
 struct StarterView_Previews: PreviewProvider {
     static var previews: some View {
         StarterView()
+            .environmentObject(UserManager())
     }
 }
