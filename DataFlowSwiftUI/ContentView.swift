@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    private var timer = TimeCounter()
+    @StateObject private var timer = TimeCounter()
     
     var body: some View {
         VStack {
@@ -31,7 +31,7 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct ButtonView: View {
-    var timer: TimeCounter
+    @ObservedObject var timer: TimeCounter
     
     var body: some View {
         Button(action: timer.startTimer) {
