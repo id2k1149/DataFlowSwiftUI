@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RegisterView: View {
     @State private var name = ""
+    @EnvironmentObject private var user: UserManager
     
     var body: some View {
         VStack {
