@@ -14,6 +14,7 @@
 		509628B329F035A900531775 /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509628B229F035A900531775 /* TimeCounter.swift */; };
 		509628B529F03E8E00531775 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509628B429F03E8E00531775 /* RegisterView.swift */; };
 		509628B729F040A700531775 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509628B629F040A700531775 /* UserManager.swift */; };
+		509628B929F045F700531775 /* StarterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509628B829F045F700531775 /* StarterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		509628B229F035A900531775 /* TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
 		509628B429F03E8E00531775 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		509628B629F040A700531775 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		509628B829F045F700531775 /* StarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				509628A429F0241300531775 /* DataFlowSwiftUIApp.swift */,
+				509628B829F045F700531775 /* StarterView.swift */,
 				509628A629F0241300531775 /* ContentView.swift */,
 				509628B429F03E8E00531775 /* RegisterView.swift */,
 				509628B229F035A900531775 /* TimeCounter.swift */,
@@ -148,6 +151,7 @@
 			files = (
 				509628B329F035A900531775 /* TimeCounter.swift in Sources */,
 				509628B529F03E8E00531775 /* RegisterView.swift in Sources */,
+				509628B929F045F700531775 /* StarterView.swift in Sources */,
 				509628A729F0241300531775 /* ContentView.swift in Sources */,
 				509628B729F040A700531775 /* UserManager.swift in Sources */,
 				509628A529F0241300531775 /* DataFlowSwiftUIApp.swift in Sources */,
