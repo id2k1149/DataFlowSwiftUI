@@ -20,7 +20,6 @@ struct ContentView: View {
             ButtonView(timer: timer)
             Spacer()
         }
-        
     }
 }
 
@@ -35,7 +34,7 @@ struct ButtonView: View {
     
     var body: some View {
         Button(action: timer.startTimer) {
-            Text("Start")
+            Text(timer.buttonTitle)
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
