@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var timer = 3
+    private var timer = TimeCounter()
     
     var body: some View {
         VStack {
-            Text(timer.formatted())
+            Text(timer.counter.formatted())
                 .font(.largeTitle)
                 .padding(.top, 100)
             Spacer()
             
-            ButtonView(timer: $timer)
+            ButtonView(timer: timer)
             Spacer()
         }
         
@@ -31,10 +31,10 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct ButtonView: View {
-    @Binding var timer: Int
+    var timer: TimeCounter
     
     var body: some View {
-        Button(action: { timer -= 1 }) {
+        Button(action: timer.startTimer) {
             Text("Start")
                 .font(.largeTitle)
                 .fontWeight(.bold)
