@@ -61,8 +61,8 @@
 			children = (
 				509628A429F0241300531775 /* DataFlowSwiftUIApp.swift */,
 				509628B829F045F700531775 /* StarterView.swift */,
-				509628A629F0241300531775 /* ContentView.swift */,
 				509628B429F03E8E00531775 /* RegisterView.swift */,
+				509628A629F0241300531775 /* ContentView.swift */,
 				509628B229F035A900531775 /* TimeCounter.swift */,
 				509628B629F040A700531775 /* UserManager.swift */,
 				509628A829F0241500531775 /* Assets.xcassets */,
