@@ -21,8 +21,6 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .padding(.top, 100)
             Spacer()
-            
-//            ButtonView(timer: timer)
             ButtonView(title: "Start",
                        timer: timer,
                        user: user)
@@ -30,8 +28,6 @@ struct ContentView: View {
             ButtonView(title: "LogOut",
                        timer: timer,
                        user: user)
-            
-//            LogoutButtonView(user: user)
         }
     }
 }
@@ -60,10 +56,18 @@ struct ButtonView: View {
                 self.timer.startTimer()
             }
         })  {
-            Text(title)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
+            switch title {
+            case "Start":
+                Text(timer.buttonTitle)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+            default:
+                Text(title)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+            }
         }
         .frame(width: 200, height: 60)
         .background(title == "LogOut" ? .blue : .red)
@@ -79,25 +83,3 @@ struct ButtonView: View {
         presentationMode.wrappedValue.dismiss()
     }
 }
-
-
-/*
-struct ButtonView: View {
-    @ObservedObject var timer: TimeCounter
-    
-    var body: some View {
-        Button(action: timer.startTimer) {
-            Text(timer.buttonTitle)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-        }
-        .frame(width: 200, height: 60)
-        .background(.red)
-        .cornerRadius(20)
-        .overlay(
-            RoundedRectangle(cornerRadius: 20).stroke(.black, lineWidth: 4)
-        )
-    }
-}
- */
