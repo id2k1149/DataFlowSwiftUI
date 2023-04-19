@@ -60,12 +60,10 @@ struct ButtonView: View {
             case "Start":
                 Text(timer.buttonTitle)
                     .font(.largeTitle)
-                    .fontWeight(.bold)
                     .foregroundColor(.white)
             default:
                 Text(title)
                     .font(.largeTitle)
-                    .fontWeight(.bold)
                     .foregroundColor(.white)
             }
         }
