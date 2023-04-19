@@ -11,6 +11,7 @@
 		509628A729F0241300531775 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509628A629F0241300531775 /* ContentView.swift */; };
 		509628A929F0241500531775 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509628A829F0241500531775 /* Assets.xcassets */; };
 		509628AC29F0241500531775 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509628AB29F0241500531775 /* Preview Assets.xcassets */; };
+		509628B329F035A900531775 /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509628B229F035A900531775 /* TimeCounter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		509628A629F0241300531775 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		509628A829F0241500531775 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		509628AB29F0241500531775 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		509628B229F035A900531775 /* TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				509628A429F0241300531775 /* DataFlowSwiftUIApp.swift */,
 				509628A629F0241300531775 /* ContentView.swift */,
+				509628B229F035A900531775 /* TimeCounter.swift */,
 				509628A829F0241500531775 /* Assets.xcassets */,
 				509628AA29F0241500531775 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				509628B329F035A900531775 /* TimeCounter.swift in Sources */,
 				509628A729F0241300531775 /* ContentView.swift in Sources */,
 				509628A529F0241300531775 /* DataFlowSwiftUIApp.swift in Sources */,
 			);
