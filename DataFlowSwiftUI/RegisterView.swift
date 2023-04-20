@@ -21,6 +21,7 @@ struct RegisterView: View {
                     Image(systemName: "checkmark.circle")
                     Text("OK")
                 }
+                .foregroundColor(.red)
             }
         }
     }

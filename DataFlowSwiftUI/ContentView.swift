@@ -48,24 +48,10 @@ struct ButtonView: View {
     @State var counter = 0
     
     var body: some View {
-        Button(action: {
-            switch title {
-            case "LogOut":
-                self.logout()
-            default:
-                self.timer.startTimer()
-            }
-        })  {
-            switch title {
-            case "Start":
-                Text(timer.buttonTitle)
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
-            default:
-                Text(title)
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
-            }
+        Button(action: {title == "LogOut" ? self.logout() : self.timer.startTimer()}) {
+            Text(title == "LogOut" ? title : timer.buttonTitle)
+                .font(.largeTitle)
+                .foregroundColor(.white)
         }
         .frame(width: 200, height: 60)
         .background(title == "LogOut" ? .blue : .red)
