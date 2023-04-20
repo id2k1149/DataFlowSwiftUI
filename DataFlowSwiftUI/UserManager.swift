@@ -7,7 +7,15 @@
 
 import Foundation
 
-class UserManager: ObservableObject {
+final class UserManager: ObservableObject {
+    let storageManager = StorageManager.shared
+    
     @Published var isRegisted = false
     var name = ""
+    
+    func add(name: String) {
+        if !storageManager.names.contains(name) {
+            storageManager.names.append(name)
+        }
+    }
 }
