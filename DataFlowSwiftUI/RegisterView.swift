@@ -10,27 +10,29 @@ import SwiftUI
 struct RegisterView: View {
     @EnvironmentObject private var user: UserManager
     @AppStorage("username") var username: String = ""
+    @State private var isUsernameValid = false
     
     var body: some View {
         VStack {
             HStack {
                 TextField("Enter your name", text: $username)
                     .multilineTextAlignment(.center)
+                    .onChange(of: username) { newValue in
+                        isUsernameValid = (newValue.count > 2)
+                    }
+                
                 Text("\(username.count)")
                     .padding(.trailing, 16)
-                    .foregroundColor(username.count < 3 ? .red : .green)
+                    .foregroundColor(isUsernameValid ? .green : .red)
             }
-            Button(action: {
-                if username.count > 2 {
-                    self.registerUser()
-                }
-            }) {
+            Button(action: registerUser) {
                 HStack {
                     Image(systemName: "checkmark.circle")
                     Text("OK")
                 }
-                .foregroundColor(username.count < 3 ? .red : .green)
+                .foregroundColor(isUsernameValid ? .green : .gray)
             }
+            .disabled(!isUsernameValid)
         }
     }
     
