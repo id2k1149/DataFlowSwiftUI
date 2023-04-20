@@ -38,6 +38,7 @@ struct RegisterView: View {
                         .foregroundColor(username.count > 2 ? .green : .red)
                         .cornerRadius(8)
                 }
+                .padding()
                 Button(action: registerUser) {
                     HStack {
                         Image(systemName: "checkmark.circle")
