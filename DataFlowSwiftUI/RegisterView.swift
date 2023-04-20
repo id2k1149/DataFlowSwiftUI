@@ -8,20 +8,28 @@
 import SwiftUI
 
 struct RegisterView: View {
-//    @State private var name = ""
     @EnvironmentObject private var user: UserManager
     @AppStorage("username") var username: String = ""
     
     var body: some View {
         VStack {
-            TextField("Enter your name", text: $username)
-                .multilineTextAlignment(.center)
-            Button(action: registerUser) {
+            HStack {
+                TextField("Enter your name", text: $username)
+                    .multilineTextAlignment(.center)
+                Text("\(username.count)")
+                    .padding(.trailing, 16)
+                    .foregroundColor(username.count < 3 ? .red : .green)
+            }
+            Button(action: {
+                if username.count > 2 {
+                    self.registerUser()
+                }
+            }) {
                 HStack {
                     Image(systemName: "checkmark.circle")
                     Text("OK")
                 }
-                .foregroundColor(.red)
+                .foregroundColor(username.count < 3 ? .red : .green)
             }
         }
     }
