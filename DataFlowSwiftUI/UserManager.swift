@@ -13,9 +13,11 @@ final class UserManager: ObservableObject {
     @Published var isRegisted = false
     var name = ""
     
-    func add(name: String) {
-        if !storageManager.names.contains(name) {
-            storageManager.names.append(name)
-        }
+    func updateStatus(for name: String, with status: Bool) {
+        storageManager.nameAndStatus["\(name)"] = isRegisted
+    }
+    
+    func printCurrentStatus() {
+        print(storageManager.nameAndStatus)
     }
 }

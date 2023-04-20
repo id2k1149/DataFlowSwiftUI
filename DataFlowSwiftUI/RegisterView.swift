@@ -11,8 +11,6 @@ struct RegisterView: View {
     @EnvironmentObject private var user: UserManager
     @AppStorage("username") var username: String = ""
     
-    @State private var showAlert = false
-    
     var body: some View {
         ZStack {
             Color.gray
@@ -28,11 +26,6 @@ struct RegisterView: View {
                         .foregroundColor(.black)
                         .background(Color.white)
                         .bold()
-                        .alert(isPresented: $showAlert) {
-                            Alert(title: Text("The name is already used"),
-                                  message: Text("Please enter a new name"),
-                                  dismissButton: .default(Text("OK")))
-                        }
                         .cornerRadius(8)
                     
                     Text("\(username.count)")
@@ -62,14 +55,10 @@ struct RegisterView: View {
     }
     
     private func registerUser() {
-        if !StorageManager.shared.names.contains(username) {
-            user.name = username
-            user.isRegisted = true
-            user.add(name: username)
-        } else {
-            showAlert.toggle()
-            username = ""
-        }
+        user.name = username
+        user.isRegisted = true
+        user.updateStatus(for: username, with: user.isRegisted)
+        user.printCurrentStatus()
     }
 }
 

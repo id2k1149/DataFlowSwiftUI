@@ -10,7 +10,7 @@ import Foundation
 final class StorageManager {
     static let shared = StorageManager()
     
-    var names = ["John", "Paul"]
+    var nameAndStatus = [String: Bool]()
     
     private init(){}
 }

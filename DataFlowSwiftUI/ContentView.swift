@@ -63,6 +63,8 @@ struct ButtonView: View {
     
     private func logout() {
         user.isRegisted = false
+        user.updateStatus(for: user.name, with: user.isRegisted)
+        user.printCurrentStatus()
         UserDefaults.standard.removeObject(forKey: "username")
         presentationMode.wrappedValue.dismiss()
     }
