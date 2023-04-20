@@ -30,17 +30,14 @@ struct RegisterView: View {
                     Image(systemName: "checkmark.circle")
                     Text("OK")
                 }
-                .foregroundColor(isUsernameValid ? .green : .gray)
             }
             .disabled(!isUsernameValid)
         }
     }
     
     private func registerUser() {
-        if !username.isEmpty {
-            user.name = username
-            user.isRegisted = true
-        }
+        user.name = username
+        user.isRegisted = true
     }
 }
 
