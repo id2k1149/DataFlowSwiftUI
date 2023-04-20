@@ -7,7 +7,17 @@
 
 import Foundation
 
-class UserManager: ObservableObject {
+final class UserManager: ObservableObject {
+    let storageManager = StorageManager.shared
+    
     @Published var isRegisted = false
     var name = ""
+    
+    func updateStatus(for name: String, with status: Bool) {
+        storageManager.nameAndStatus["\(name)"] = isRegisted
+    }
+    
+    func printCurrentStatus() {
+        print(storageManager.nameAndStatus)
+    }
 }
