@@ -10,4 +10,8 @@ import Foundation
 struct User: Codable {
     var name = ""
     var isRegistered = false
+    
+    func updateStatus(for name: String, with status: Bool) {
+        StorageManager.shared.usersCurrentStatus["\(name)"] = isRegistered
+        }
 }

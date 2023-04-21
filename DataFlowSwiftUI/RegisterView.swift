@@ -36,8 +36,11 @@ struct RegisterView: View {
     
     private func registerUser() {
         userManager.user.isRegistered = true
-        StorageManager.shared.save(user: userManager.user)
-        print(StorageManager.shared.fetchUser())
+        userManager.user.updateStatus(
+            for: userManager.user.name,
+            with: userManager.user.isRegistered)
+        StorageManager.shared.save(userStatus: StorageManager.shared.usersCurrentStatus)
+        print(StorageManager.shared.getUsersCurrentStatus())
     }
 }
 

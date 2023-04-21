@@ -27,8 +27,8 @@ struct ContentView: View {
             Spacer()
             ButtonView(title: "LogOut",
                        color: .blue) {
-                StorageManager.shared.clear(userManager: userManager)
-                print(StorageManager.shared.fetchUser())
+                StorageManager.shared.logout(userManager: userManager)
+                print(StorageManager.shared.getUsersCurrentStatus())
             }
         }
     }
