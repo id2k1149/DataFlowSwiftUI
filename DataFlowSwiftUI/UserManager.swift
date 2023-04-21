@@ -8,16 +8,11 @@
 import Foundation
 
 final class UserManager: ObservableObject {
-    let storageManager = StorageManager.shared
+    @Published var user = User()
     
-    @Published var isRegisted = false
-    var name = ""
+    init() {}
     
-    func updateStatus(for name: String, with status: Bool) {
-        storageManager.nameAndStatus["\(name)"] = isRegisted
-    }
-    
-    func printCurrentStatus() {
-        print(storageManager.nameAndStatus)
+    init(user: User) {
+        self.user = user
     }
 }

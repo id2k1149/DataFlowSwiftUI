@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		50334E4F29F18E1000A43F55 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50334E4E29F18E1000A43F55 /* StorageManager.swift */; };
+		508555CB29F2C9DB00E05C6D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508555CA29F2C9DB00E05C6D /* User.swift */; };
+		508555CD29F2CF4900E05C6D /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508555CC29F2CF4900E05C6D /* ButtonView.swift */; };
 		509628A529F0241300531775 /* DataFlowSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509628A429F0241300531775 /* DataFlowSwiftUIApp.swift */; };
 		509628A729F0241300531775 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509628A629F0241300531775 /* ContentView.swift */; };
 		509628A929F0241500531775 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509628A829F0241500531775 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		50334E4E29F18E1000A43F55 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		508555CA29F2C9DB00E05C6D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		508555CC29F2CF4900E05C6D /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		509628A129F0241300531775 /* DataFlowSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataFlowSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		509628A429F0241300531775 /* DataFlowSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowSwiftUIApp.swift; sourceTree = "<group>"; };
 		509628A629F0241300531775 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,8 +69,10 @@
 				509628B829F045F700531775 /* StarterView.swift */,
 				509628B429F03E8E00531775 /* RegisterView.swift */,
 				509628A629F0241300531775 /* ContentView.swift */,
+				508555CC29F2CF4900E05C6D /* ButtonView.swift */,
 				509628B229F035A900531775 /* TimeCounter.swift */,
 				509628B629F040A700531775 /* UserManager.swift */,
+				508555CA29F2C9DB00E05C6D /* User.swift */,
 				50334E4E29F18E1000A43F55 /* StorageManager.swift */,
 				509628A829F0241500531775 /* Assets.xcassets */,
 				509628AA29F0241500531775 /* Preview Content */,
@@ -157,8 +163,10 @@
 				509628B929F045F700531775 /* StarterView.swift in Sources */,
 				50334E4F29F18E1000A43F55 /* StorageManager.swift in Sources */,
 				509628A729F0241300531775 /* ContentView.swift in Sources */,
+				508555CB29F2C9DB00E05C6D /* User.swift in Sources */,
 				509628B729F040A700531775 /* UserManager.swift in Sources */,
 				509628A529F0241300531775 /* DataFlowSwiftUIApp.swift in Sources */,
+				508555CD29F2CF4900E05C6D /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
